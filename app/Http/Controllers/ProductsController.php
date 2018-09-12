@@ -15,7 +15,7 @@ class ProductsController extends Controller
 
     public function index()
     {
-        return view('products.index', ['products' => Product::All()]);
+        return view('products.index', ['products' => Product::paginate(5)]);
     }
 
     public function create()
